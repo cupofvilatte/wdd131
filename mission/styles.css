@@ -40,3 +40,13 @@ li {
     display: block;
     margin: 0 auto;
 }
+
+.dark {
+    background-color: #333;
+    color: white;
+    border: solid white 1px;
+}
+
+.dark h2 {
+    color: 53beef;
+}
