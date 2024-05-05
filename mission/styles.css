@@ -35,7 +35,13 @@ li {
     margin: 20px;
 }
 
-.byui-logo {
+#byui-logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.dark #byui-logo {
     width: 150px;
     display: block;
     margin: 0 auto;
@@ -47,6 +53,6 @@ li {
     border: solid white 1px;
 }
 
-.dark h2 {
-    color: 53beef;
+.dark header h2 {
+    color: #619ec7;
 }
