@@ -18,10 +18,25 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
+    margin: auto 0;
+    text-align: center;
 }
 
 a:link, a:visited {
-    color: var(--accent-color);
+    color: var(--text-light);
+}
+
+main {
+    background-color: #ebebeb;
+}
+
+img {
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: solid white 10px;
+    box-shadow: 10px 10px 10px #888888;
 }
 
 .gallery {
