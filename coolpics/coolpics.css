@@ -13,12 +13,12 @@
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
+    margin: 0 auto;
 }
 
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
-    margin: auto 0;
     text-align: center;
 }
 
@@ -26,7 +26,13 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
-    margin: auto;
+    line-height: 1.5em;
+    padding-bottom: 15px;
+}
+
+ul {
+    text-align: center;
+    grid-column-start: 1;
 }
 
 a:link, a:visited {
@@ -53,7 +59,7 @@ img {
 }
 
 .gallery {
-    
+
 }
 
 footer {
