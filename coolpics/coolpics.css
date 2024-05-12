@@ -26,6 +26,7 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
+    margin: auto;
 }
 
 a:link, a:visited {
@@ -58,6 +59,7 @@ img {
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
+    text-align: center;
 }
 
 @media screen and (min-width: 600px) {
@@ -69,5 +71,14 @@ footer {
 
     .menu {
         display: inline;
+    }
+
+    .menu a {
+        padding: 20px;
+    }
+
+    footer p {
+        text-align: left;
+        padding-left: 40px;
     }
 }
