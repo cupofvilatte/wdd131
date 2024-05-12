@@ -22,12 +22,24 @@ header {
     text-align: center;
 }
 
+.menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
 a:link, a:visited {
     color: var(--text-light);
 }
 
 main {
     background-color: #ebebeb;
+    text-align: center;
+}
+
+main h2 {
+    font-family: var(--secondary-font);
+    padding: 25px;
 }
 
 img {
@@ -53,5 +65,9 @@ footer {
     section {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .menu {
+        display: inline;
     }
 }
