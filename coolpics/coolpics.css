@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Fira+Sans:wght@500&family=Lora:wght@500;600&family=Mooli&family=Sometype+Mono:wght@400;500&display=swap');
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Mooli", sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+a:link, a:visited {
+    color: var(--accent-color);
+}
+
+.gallery {
+    
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+@media screen and (min-width: 600px) {
+
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
