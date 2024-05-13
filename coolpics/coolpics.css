@@ -21,6 +21,7 @@ header {
     color: var(--text-light);
     text-align: center;
     display: grid;
+    padding-bottom: 20px;
 }
 
 ul {
@@ -65,6 +66,10 @@ img {
     box-shadow: 10px 10px 10px #888888;
 }
 
+figure:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
 
 .gallery {
     
