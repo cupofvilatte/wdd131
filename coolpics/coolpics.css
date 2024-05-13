@@ -14,13 +14,17 @@ body {
     font-family: var(--primary-font);
     font-size: 1.2em;
     margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
+    display: grid;
+    
 }
+
 
 .menu {
     display: grid;
