@@ -13,7 +13,7 @@
 body {
     font-family: var(--primary-font);
     font-size: 1.2em;
-    margin: 0 auto;
+    margin: 0;
 }
 
 header {
@@ -28,11 +28,13 @@ header {
     text-align: center;
     line-height: 1.5em;
     padding-bottom: 15px;
+    padding: 0;
 }
 
 ul {
     text-align: center;
     grid-column-start: 1;
+    margin: 0;
 }
 
 a:link, a:visited {
@@ -42,6 +44,7 @@ a:link, a:visited {
 main {
     background-color: #ebebeb;
     text-align: center;
+    margin: 0;
 }
 
 main h2 {

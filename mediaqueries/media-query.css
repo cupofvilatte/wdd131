@@ -10,15 +10,24 @@ header, main, footer {
     background-color: #e6f2ff;
 }
 
+header {
+    padding: 0;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+    box-sizing: border-box;
 }
 
 section {
     padding: 1rem;
     background-color: #fff;
+}
+
+footer {
+
 }
 
 @media screen and (min-width: 700px) {
