@@ -12,14 +12,14 @@ header {
     text-align: center;
 }
 
-.skiptocontent a {
+.skiptocontent {
     position: absolute;
     left: -500px;
     background-color: #473144;
     color: aliceblue;
 }
 
-.skiptocontent a:focus {
+.skiptocontent:focus {
     left: 50px;
 }
 
