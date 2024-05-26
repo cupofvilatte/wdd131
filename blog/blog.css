@@ -16,6 +16,7 @@ header {
     display: grid;
     grid-template-columns: 80px 80px 80px;
     justify-content: end;
+    list-style-type: none;
 }
 
 .menu {
