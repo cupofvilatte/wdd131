@@ -12,6 +12,17 @@ header {
     text-align: center;
 }
 
+.skiptocontent a {
+    position: absolute;
+    left: -500px;
+    background-color: #473144;
+    color: aliceblue;
+}
+
+.skiptocontent a:focus {
+    left: 50px;
+}
+
 .menu ul {
     display: grid;
     grid-template-columns: 80px 80px 80px;
