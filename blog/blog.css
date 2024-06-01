@@ -10,7 +10,7 @@ h1, h2 {
 
 header {
     text-align: center;
-}
+} 
 
 .skiptocontent {
     position: absolute;
@@ -56,10 +56,17 @@ main {
 .filter {
     grid-column: 2/3;
     padding: 30px;
+    border: solid #efc69b 2px;
+    margin: 30px;
 }
 
 .books {
     grid-row-start: 1;
+}
+
+.book-cover {
+    display: flex;
+    justify-content: center;
 }
 
 .book-cover img {
@@ -73,9 +80,19 @@ main {
 }
 
 .book-info {
-    padding: 30px;
+    padding-right: 30px;
+    text-align: right;
+    line-height: 0.5em;
+    border-right: solid #efc69b 2px;
+    margin-top: 30px;
+    
+}
+
+.book-info p:first-of-type {
+    font-size: 1.5em;
 }
 
 .book {
     padding: 30px;
+    padding-top: 20px;
 }

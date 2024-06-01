@@ -25,3 +25,37 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	}
 ]
+
+function createArticles(articles) {
+	const books = document.querySelector('.books');
+
+	// ? come back to this later: books.id = article.title.toLowerCase().replace(/\s+/g, '-').replace(/:g, '');
+
+	articles.forEach(article => {
+		const bookContainer = document.createElement('div');
+		bookContainer.classList.add('book-container');
+
+		const bookInfo = document.createElement('section');
+		bookInfo.classList.add('book-info');
+		bookInfo.innerHTML = `
+			<p>${article.date}</p>
+			<p>${article.ages}</p>
+			<p>${article.genre}</p>
+			<p>${article.stars}</p>
+		`;
+
+		const book = document.createElement('section');
+		book.classList.add('book');
+		book.innerHTML = `
+			<h2 class="book-title">${article.title}</h2>
+			<div class="book-cover">
+				<img src="${article.imgSrc}" alt="${article.imgAlt}>
+			</div>
+			<p>${article.description} <a href="#"Read More...</a></p>
+		`;
+		bookContainer.appendChild(bookInfo);
+		bookContainer.appendChild(book);
+	});
+}
+
+createArticles(articles)
