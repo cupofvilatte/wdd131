@@ -1,0 +1,59 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    align-content: center;
+    margin: auto;
+}
+
+#creditCardForm {
+    grid-column: 2/3;
+    align-self: center;
+}
+
+#cardFront {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+#amountTotal, p, .card-image {
+    grid-row: 1/2;
+}
+
+#cardNumber {
+    grid-row: 2/3;
+    justify-self: left;
+}
+
+#cardNumberInput {
+    grid-row: 2/3;
+    justify-self: left;
+}
+
+#cardHolder {
+    grid-row: 3/4;
+}
+
+#cardHolderInput {
+    grid-row: 3/4;
+}
+
+#expiration {
+    grid-row: 3/4;
+}
+
+#expirationMonth {
+    grid-row: 3/4;
+}
+
+#expirationYear {
+    grid-row: 3/4;
+}
+
+#cardBack {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: cadetblue;
+    border-radius: 10px;
+}
