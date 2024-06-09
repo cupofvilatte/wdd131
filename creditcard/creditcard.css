@@ -175,8 +175,12 @@ button {
     cursor: pointer;
     grid-row: 3/4;
     color: #fff;
-    width: 100%;
+    width: 15%;
     text-align: center;
     margin-top: 10px;
     grid-row: 4;
+    grid-column: 1;
+    position: absolute;
+    bottom: 75px;
+    left: 530px;
 }
