@@ -118,9 +118,6 @@ footer a {
 }
 
 @media screen and (min-width: 600px) {
-    .recipe-title {
-        color: #59c3c3;
-    }
 
     footer {
         flex-direction: row-reverse;
@@ -136,9 +133,6 @@ footer a {
 }
 
 @media screen and (min-width: 830px) {
-    .recipe-title {
-        color: aquamarine;
-    }
 
     .recipes {
         display: flex;
