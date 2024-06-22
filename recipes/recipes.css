@@ -70,10 +70,6 @@ header {
     max-width: 100%;
 }
 
-.recipes a {
-    line-height: 100px;
-}
-
 .tags {
     display: flex;
 }
@@ -119,6 +115,11 @@ footer a {
 
 .social img {
     width: 100px;
+}
+
+.social a {
+    display: inline-block;
+    height: 100%;
 }
 
 @media screen and (min-width: 600px) {
