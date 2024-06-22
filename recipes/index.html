@@ -7,8 +7,54 @@
     <title>Recipe Page</title>
     <link rel="stylesheet" href="./recipes.css">
     <script src="./main.js"></script>
+
+    <meta property="og:title" content="Page Title">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Page Description">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
-    
+    <header>
+        <img class="recipe-logo" src="./recipeImages/recipe-book.png" alt="Recipe book logo">
+        <h1>RecipeBook</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Find a recipe...">
+            <button><img src="./recipeImages/search.svg" alt="search picture"></button>
+        </div>
+    </header>
+    <main>
+        <div class="recipes">
+            <div class="image-container">
+                <img src="./recipeImages/sweet-potato-waffle-md.jpg" alt="sweet potatos waffle recipe image">
+            </div>
+            <div class="recipe-details">
+                <div class="tags">
+                    <h2>Waffles</h2>
+                    <h2>Sweet Potato</h2>
+                    <h2>Side</h2>
+                </div>
+                <h3 class="recipe-title">Sweet Potato Waffles</h3>
+                <span class="rating" role="img" aria-label="Rating: 3 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p class="recipe-description">Savory waffles made with Sweet potato with a hint of Ginger</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="./recipeImages/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="./recipeImages/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="./recipeImages/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </footer>
 </body>
 </html>
