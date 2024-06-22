@@ -71,7 +71,7 @@ header {
 }
 
 .recipes a {
-    height: 100px;
+    line-height: 100px;
 }
 
 .tags {
