@@ -73,12 +73,38 @@ function renderRecipes(recipeList) {
     mainElement.innerHTML = recipeStrings;
 }
 
-function init() {
-  // get a random recipe
-  const recipe = getRandomListEntry(recipes);
+function filterRecipes(query) {
+    const filteredList = recipes.filter(recipe => {
+        const nameMatch = recipe.name.toLowerCase().includes(query);
+        const descMatch = recipe.description.toLowerCase().includes(query);
+        const tagMatch = recipe.tags.find(tag => tag.toLowerCase().includes(query));
+        const ingredientMatch = recipe.recipeIngredient.find(ingregient => ingregient.toLowerCase().includes(query));
 
-  // render the recipe with renderRecipes.
-  renderRecipes([recipe]);
+        return nameMatch || descMatch || tagMatch || ingredientMatch;
+    });
+
+    const sortedRecipes = filteredList.sort((a, b) => a.name.localeCompare(b.name));
+
+    renderRecipes(sortedRecipes);
+}
+
+function handleSearch(e) {
+    e.preventDefault()
+
+    const searchInput = document.querySelector('.search-bar input').value;
+    const query = searchInput.toLowerCase();
+    filterRecipes(query);
+}
+
+function init() {
+    const searchButton = document.querySelector('.search-bar button');
+    searchButton.addEventListener('click', handleSearch);
+
+    // get a random recipe
+    const recipe = getRandomListEntry(recipes);
+
+    // render the recipe with renderRecipes.
+    renderRecipes([recipe]);
 }
 
 init();
