@@ -1,0 +1,218 @@
+:root {
+    /* color palette */
+    --primary-color: #d2d4c8;
+    --secondary-color: #b8bdb5;
+    --accent1-color: #342e37;
+    --accent2-color: #101935;
+  
+    /* fonts */
+    --heading-font: Georgia, serif;
+    --paragraph-font: Verdana, sans-serif;
+}
+
+/* Home Page CSS (includes Header and Footer) */
+
+body {
+    margin: auto 0;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--accent1-color);
+    height: 150px;
+}
+
+.site-header img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.site-header a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
+
+.site-header a:hover {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+}
+
+.intro-to-explication {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.intro-text {
+    grid-column: 1/2;
+    padding: 20px;
+}
+
+.home-page-image {
+    grid-column: 2/3;
+    padding: 20px;
+}
+
+.home-page-image img {
+    border: 5px solid var(--accent1-color);
+}
+
+.accordion {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    background-color: var(--secondary-color);
+    color: var(--accent2-color);
+    font-size: 1.2em;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 20px;
+    background-color: var(--accent1-color);
+    color: var(--secondary-color);
+}
+
+footer div {
+    display: flex;
+    align-items: center;
+}
+
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+footer a:hover {
+    background-color: var(--accent2-color);
+    border: 1px solid var(--accent2-color);
+    padding: 5px;
+}
+
+footer p {
+    margin: 0 10px;
+}
+
+.social img {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+}
+
+/* Examples Page */
+
+.example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#examples-content h1 {
+    padding-left: 30px;
+}
+
+#examples-content section {
+    border: 3px solid var(--accent2-color);
+    margin: 30px;
+}
+
+.explication-text {
+    grid-column: 1/2;
+    padding: 20px;
+}
+
+.explication-text h2 {
+    padding-left: 30px;
+}
+
+.explication-text h3, p {
+    padding-left: 50px;
+}
+
+.explication-image {
+    grid-column: 2/3;
+    justify-self: center;
+    padding-top: 40px;
+}
+
+.example img {
+    width: 90%;
+}
+
+/* Try it Yourself Page */
+
+#diy-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#diy-content {
+    display: flex;
+}
+
+#diy-content section {
+    width: 100%;
+}
+
+#diy-content h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-question {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#diy-content form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.5em;   
+}
+
+#diy-content form input {
+    height: 70px;
+    padding: 10px;
+    border: 1px solid var(--accent2-color);
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+#diy-content form input:focus {
+    border: 5px solid var(--accent2-color);
+}
+
+.form-submit {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+input[type="submit"] {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+input[type="submit"]:hover {
+    font-weight: bold;
+}
