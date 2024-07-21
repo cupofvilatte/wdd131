@@ -63,13 +63,35 @@ body {
     border: 5px solid var(--accent1-color);
 }
 
+.seven-steps h1 {
+    padding-left: 20px;
+}
+
 .accordion {
     width: 100%;
     height: 50px;
     margin-top: 30px;
+    margin-bottom: 20px;
     background-color: var(--secondary-color);
     color: var(--accent2-color);
     font-size: 1.2em;
+    border: none;
+    outline: none;
+}
+
+.accordion:hover, .active {
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel.show {
+    display: block;
 }
 
 footer {

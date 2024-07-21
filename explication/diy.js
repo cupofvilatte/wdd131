@@ -29,39 +29,51 @@ function getRandomTerm() {
 function displayRandomTerm() {
     const randomTerm = getRandomTerm();
     document.getElementById('random-word').textContent = randomTerm;
+    return randomTerm;
 }
 
-document.addEventListener('DOMContentLoaded', displayRandomTerm);
+document.addEventListener('DOMContentLoaded', function() {
+    const randomTerm = displayRandomTerm();
 
+    const termElement = document.querySelector('.example-term');
+    if (termElement) {
+        termElement.innerText = getRandomTerm();
+    }
 
-document.getElementById('explication-form').addEventListener('submit', function() {
-    const term = document.querySelector('.example-term').innerText;
-    const state = document.getElementById('form-state').value;
-    const elaborate = document.getElementById('form-elaborate').value;
-    const exemplify = document.getElementById('form-exemplify').value;
-    const illustrate = document.getElementById('form-illustrate').value;
-    const compare = document.getElementById('form-compare').value;
-    const divide = document.getElementById('form-divide').value;
-    const apply = document.getElementById('form-apply').value;
+    document.getElementById('explication-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
-    let printContent = `
-    <h1>${term}</h1>
-        <p><strong>State:</strong> ${state}</p>
-        <p><strong>Elaborate:</strong> ${elaborate}</p>
-        <p><strong>Exemplify:</strong> ${exemplify}</p>
-        <p><strong>Illustrate:</strong> ${illustrate}</p>
-        <p><strong>Compare or Contrast:</strong> ${compare}</p>
-        <p><strong>Divide and Make Distinctions:</strong> ${divide}</p>
-        <p><strong>Apply:</strong> ${apply}</p>
-    `;
+        // Get the form values
+        const term = termElement ? termElement.innerText : 'Unknown Term';
+        const state = document.getElementById('form-state').value;
+        const elaborate = document.getElementById('form-elaborate').value;
+        const exemplify = document.getElementById('form-exemplify').value;
+        const illustrate = document.getElementById('form-illustrate').value;
+        const compare = document.getElementById('form-compare').value;
+        const divide = document.getElementById('form-divide').value;
+        const apply = document.getElementById('form-apply').value;
 
-    let printWindow = window.open('', '_blank', 'width=800,height=600');
-    printWindow.document.write('<html><head><title>Print</title></head><body>');
-    printWindow.document.write(printContent);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
+        // Create a new window or a new section for printing
+        let printContent = `
+            <h1>${randomTerm}</h1>
+            <p><strong>State:</strong> ${state}</p>
+            <p><strong>Elaborate:</strong> ${elaborate}</p>
+            <p><strong>Exemplify:</strong> ${exemplify}</p>
+            <p><strong>Illustrate:</strong> ${illustrate}</p>
+            <p><strong>Compare or Contrast:</strong> ${compare}</p>
+            <p><strong>Divide and Make Distinctions:</strong> ${divide}</p>
+            <p><strong>Apply:</strong> ${apply}</p>
+        `;
 
-    // Print the new window
-    printWindow.print();
-    printWindow.close();
-})
+        // Open a new window for printing
+        let printWindow = window.open('', '_blank', 'width=800,height=600');
+        printWindow.document.write('<html><head><title>Print</title></head><body>');
+        printWindow.document.write(printContent);
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+
+        // Print the new window
+        printWindow.print();
+        printWindow.close();
+    });
+});
